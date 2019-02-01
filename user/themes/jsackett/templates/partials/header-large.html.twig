@@ -1,0 +1,27 @@
+<header class="hero is-dark">
+  <div class="hero-body">
+    <div class="level">
+      <div class="left-side">
+        <div>
+          <a href="/">
+            <h1>Jared<br>Sackett</h1>
+          </a>
+          <h2>This is not a clever tagline</h2>
+        </div>
+      </div>
+
+      <div class="right-side">
+        {% include 'partials/navigation.html.twig' %}
+      </div>
+    </div>
+  </div>
+  <svg viewBox='0 0 100 100' version="1.1" preserveAspectRatio='none' class="triangles">
+    <filter id="blur-filter" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
+      <feBlend in="SourceGraphic" in2="offOut" mode="normal" />
+    </filter>
+    <polygon points='100,50 100,100 25,100' class='Tri1'/>
+    <polygon points='100,25 100,100 50,100' class='Tri2'/>
+    <polygon points='100,0 100,100 75,100' class='Tri3'/>
+  </svg>
+</header>

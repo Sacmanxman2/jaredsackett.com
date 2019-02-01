@@ -1,0 +1,132 @@
+// Header properties applying to everything
+.hero {
+    &.is-dark {
+        background: darken( $primary, 40% );
+    }
+
+    h1 {
+        font-family: $family-header-title;
+        font-size: 2rem;
+        text-shadow: 0 0 1.5rem white, 0 0 4rem lighten( $primary, 20% ), 0 0 6rem lighten( $primary, 10% );
+
+        @include prefixed(transition-duration, .3s);
+        @include prefixed(transition-property, text-shadow);
+
+        &:hover,
+        &:focus,
+        &:active {
+          text-shadow: 0 0 2rem white, 0 0 4rem lighten( $primary, 20% ), 0 0 5rem lighten( $primary, 25% ), 0 0 10rem lighten( $primary, 15% );
+        }
+    }
+}
+
+// Header properties applying just to the home page (large header)
+.header-large {
+    .hero {
+        min-height: 100%;
+        min-height: 100vh;
+    }
+
+    .hero-body {
+        justify-content: center;
+        z-index: 10;
+
+        .left-side {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .right-side {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-align: left;
+
+            @include prefixed(animation, fadein 1s ease-in running);
+
+            @media(max-width: $desktop) {
+                text-align: center;
+            }
+        }
+
+        h2 {
+            margin-top: 1rem;
+            font-family: $family-header-title;
+            font-size: 1.5rem;
+            text-align: left;
+
+            @include prefixed(animation, fadein 1s ease-in running);
+
+            @media(max-width: $desktop) {
+                text-align: center;
+            }
+            
+            text-shadow: 0 0 1rem white, 0 0 2rem lighten( $primary, 20% ), 0 0 4rem lighten( $primary, 10% );
+        }
+
+        nav {
+            font-size: 2rem;
+            text-align: right;
+
+            @media(max-width: $desktop) {
+                text-align: center;
+            }
+
+            li {
+                margin: 2rem 0;
+
+                a {
+                  @include prefixed(animation, fadein 1s ease-in running);
+                  &:not(.iconLink) { @extend .hvr-forward; }
+
+                  &.iconLink { @extend .hvr-sink; }
+
+                  &:hover {
+                    text-shadow: 0 0 .75rem white, 0 0 1.5rem lighten( $primary, 10% );
+                  }
+                }
+
+            }
+        }
+    }
+
+    .triangles {
+        width: 100%;
+        height: 20rem;
+        margin-top: -10rem;
+        z-index: 1;
+
+        @media(max-width: $desktop) {
+            height: 10rem;
+            margin-top: -5rem;
+            margin-left: -25%;
+            width: 125%;
+        }
+    }
+
+    .Tri1 {
+        fill: darken( $primary, 30% );
+        filter: url(#blur-filter);
+    }
+
+    .Tri2 {
+        fill: darken( $primary, 20% );
+        filter: url(#blur-filter);
+    }
+
+    .Tri3 {
+        fill: darken( $primary, 10% );
+        filter: url(#blur-filter);
+    }
+
+
+    @include keyframes(fadein) {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+}

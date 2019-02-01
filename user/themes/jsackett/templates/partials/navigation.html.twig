@@ -1,0 +1,12 @@
+<nav {% if not page.home() %}class="navbar"{% endif %}>
+  {% for pagelink in pages.children.visible %}
+  <a {% if not page.home() %}class="navbar-item"{% endif %} href="{{ pagelink.url }}">
+        {% if pagelink.header.icon %}<i class="mdi mdi-{{ pagelink.header.icon }}"></i>{% endif %}
+        {{ pagelink.menu }}
+    </a>
+  {% endfor %}
+  <div class="iconrow">
+    <a href="https://github.com/sacmanxman1" class="iconLink" target="_blank"><span class="icon"><i class="mdi mdi-github-circle"></i></span></a>
+    <a href="https://twitter.com/sacmanxman2" class="iconLink" target="_blank"><span class="icon"><i class="mdi mdi-twitter"></i></span></a>
+  </div>
+</nav>

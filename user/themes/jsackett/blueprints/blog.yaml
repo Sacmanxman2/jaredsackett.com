@@ -1,0 +1,8 @@
+extends@: default
+child_type: blogpost
+
+rules:
+    slug:
+        pattern: "[a-z][a-z0-9_\-]+"
+        min: 2
+        max: 80

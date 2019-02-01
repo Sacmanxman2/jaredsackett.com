@@ -1,0 +1,7 @@
+$family-sans-serif: "Open Sans";
+$family-header-title: "Comfortaa";
+$primary: rgb(50, 0, 200);
+
+@import '../../../../node_modules/bulma/bulma.sass';
+@import 'hover-scss/_hover.scss';
+@import 'header';

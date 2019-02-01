@@ -1,1 +1,5 @@
-gravsite
+.sass-cache
+node_modules
+composer.lock
+cache/**
+logs/**
