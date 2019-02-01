@@ -1,0 +1,28 @@
+.triangles {
+    width: 100%;
+    height: 20rem;
+    margin-top: -10rem;
+    z-index: 1;
+
+    @media(max-width: $desktop) {
+        height: 10rem;
+        margin-top: -5rem;
+        margin-left: -25%;
+        width: 125%;
+    }
+}
+
+.Tri1 {
+    fill: darken( $primary, 30% );
+    filter: url(#blur-filter);
+}
+
+.Tri2 {
+    fill: darken( $primary, 20% );
+    filter: url(#blur-filter);
+}
+
+.Tri3 {
+    fill: darken( $primary, 10% );
+    filter: url(#blur-filter);
+}

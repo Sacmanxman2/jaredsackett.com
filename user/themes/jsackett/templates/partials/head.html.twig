@@ -9,15 +9,14 @@
 <link rel="canonical" href="{{ page.url(true, true) }}" />
 
 {% block stylesheets %}
-    {% do assets.addCss('https://unpkg.com/aos@2.3.1/dist/aos.css', 102) %}
-    {% do assets.addCss('https://fonts.googleapis.com/css?family=Comfortaa', 101) %}
-    {% do assets.addCss('https://fonts.googleapis.com/css?family=Open+Sans', 101) %}
-    {% do assets.addCss('https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css') %}
-    {% do assets.addCss('theme://css/main.css', 100) %}
+  {% do assets.addCss('https://unpkg.com/aos@2.3.1/dist/aos.css', 102) %}
+  {% do assets.addCss('https://fonts.googleapis.com/css?family=Comfortaa', 101) %}
+  {% do assets.addCss('https://fonts.googleapis.com/css?family=Open+Sans', 101) %}
+  {% do assets.addCss('https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css') %}
+  {% do assets.addCss('theme://css/main.css', 100) %}
 {% endblock %}
 {{ assets.css() }}
 
 {% block javascripts %}
-    {% do assets.addJs('https://unpkg.com/aos@2.3.1/dist/aos.js', 102) %}
+  {% do assets.addJs('https://unpkg.com/aos@2.3.1/dist/aos.js', 102) %}
 {% endblock %}
-{{ assets.js('head') }}

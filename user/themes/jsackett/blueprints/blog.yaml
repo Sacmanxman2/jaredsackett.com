@@ -2,7 +2,15 @@ extends@: default
 child_type: blogpost
 
 rules:
-    slug:
-        pattern: "[a-z][a-z0-9_\-]+"
-        min: 2
-        max: 80
+  slug:
+    pattern: "[a-z][a-z0-9_\-]+"
+    min: 2
+    max: 80
+
+content:
+  items: '@self.children'
+  order:
+    by: date
+    dir: desc
+  limit: 10
+  pagination: true

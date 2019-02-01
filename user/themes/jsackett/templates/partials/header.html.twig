@@ -1,7 +1,45 @@
 <header class="hero is-dark">
   <div class="hero-head">
     <nav class="navbar">
-        {% include 'partials/navigation.html.twig' %}
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="/">
+            <h1>Jared Sackett</h1>
+          </a>
+
+          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div class="navbar-menu" id="navMenu">
+          <div class="navbar-end">
+            {% include 'partials/navigation.html.twig' %}
+          </div>
+        </div>
+      </div>
     </nav>
   </div>
 </header>
+
+{% if not page.home() %}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    if ($navbarBurgers.length > 0) {
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+          var target = el.dataset.target;
+          var $target = document.getElementById(target);
+
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    }
+  });
+</script>
+{% endif %}

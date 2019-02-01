@@ -9255,7 +9255,7 @@ label.panel-block:hover {
 }
 
 /* Sink */
-.hvr-sink {
+.hvr-sink, .home .hero-body nav a.iconLink {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -9268,7 +9268,7 @@ label.panel-block:hover {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-.hvr-sink:hover, .hvr-sink:focus, .hvr-sink:active {
+.hvr-sink:hover, .home .hero-body nav a.iconLink:hover, .hvr-sink:focus, .home .hero-body nav a.iconLink:focus, .hvr-sink:active, .home .hero-body nav a.iconLink:active {
   -webkit-transform: translateY(8px);
   transform: translateY(8px);
 }
@@ -10102,7 +10102,7 @@ label.panel-block:hover {
 }
 
 /* Forward */
-.hvr-forward {
+.hvr-forward, .home .hero-body nav a:not(.iconLink) {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -10113,7 +10113,7 @@ label.panel-block:hover {
   -webkit-transition-property: transform;
   transition-property: transform;
 }
-.hvr-forward:hover, .hvr-forward:focus, .hvr-forward:active {
+.hvr-forward:hover, .home .hero-body nav a:hover:not(.iconLink), .hvr-forward:focus, .home .hero-body nav a:focus:not(.iconLink), .hvr-forward:active, .home .hero-body nav a:active:not(.iconLink) {
   -webkit-transform: translateX(8px);
   transform: translateX(8px);
 }
@@ -13085,11 +13085,13 @@ label.panel-block:hover {
   height: 25px;
 }
 
-.hero.is-dark {
+.hero.is-dark, .hero .navbar-menu, .hero .navbar-menu.is-active {
   background: black;
 }
-.hero h1 {
+.hero h1, .hero h2 {
   font-family: "Comfortaa";
+}
+.hero h1 {
   font-size: 2rem;
   text-shadow: 0 0 1.5rem white, 0 0 4rem #632fff, 0 0 6rem #3f00fb;
   -webkit-transition-duration: 0.3s;
@@ -13101,8 +13103,160 @@ label.panel-block:hover {
   text-shadow: 0 0 2rem white, 0 0 4rem #632fff, 0 0 5rem #7649ff, 0 0 10rem #5016ff;
 }
 
-.home a {
+.home.hero {
+  min-height: 100%;
+  min-height: 100vh;
+}
+.home .hero-body {
+  justify-content: center;
+  z-index: 10;
+}
+.home .hero-body .level {
+  z-index: 5;
+}
+@media (max-width: 1088px) {
+  .home .hero-body .level {
+    flex-direction: column;
+  }
+}
+.home .hero-body .left-side {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+.home .hero-body .right-side {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: right;
+}
+.home .hero-body .right-side nav {
   display: block;
+}
+.home .hero-body .right-side nav a {
+  display: block;
+}
+.home .hero-body h1 {
+  font-size: 4rem;
+  -webkit-animation: fadein 1s ease-in running;
+  animation: fadein 1s ease-in running;
+}
+@media (max-width: 1088px) {
+  .home .hero-body h1 {
+    text-align: center;
+  }
+}
+.home .hero-body h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  text-shadow: 0 0 1rem white, 0 0 2rem #632fff, 0 0 4rem #3f00fb;
+  -webkit-animation: fadein 1s ease-in running;
+  animation: fadein 1s ease-in running;
+}
+@media (max-width: 1088px) {
+  .home .hero-body h2 {
+    text-align: center;
+  }
+}
+.home .hero-body nav {
+  font-size: 2rem;
+}
+@media (max-width: 1088px) {
+  .home .hero-body nav {
+    text-align: center;
+  }
+}
+.home .hero-body nav a {
+  margin: 2rem 0;
+  -webkit-animation: fadein 1s ease-in running;
+  animation: fadein 1s ease-in running;
+}
+.home .hero-body nav a.iconLink {
+  margin-left: 1.5rem;
+}
+.home .hero-body nav a:hover {
+  text-shadow: 0 0 0.75rem white, 0 0 1.5rem #3f00fb;
+}
+.home .hero-body nav .iconrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+@media (max-width: 1088px) {
+  .home .hero-body nav .iconrow {
+    justify-content: center;
+  }
+}
+
+.hero:not(.home) {
+  position: fixed;
+  margin-top: -3.25rem;
+  z-index: 5;
+  width: 100%;
+  width: 100vw;
+}
+@media (max-width: 1088px) {
+  .hero:not(.home) {
+    padding: 0.5rem;
+    margin-top: -4.25rem;
+  }
+}
+
+@media (max-width: 1088px) {
+  body.has-navbar-fixed-top {
+    padding-top: 4.25rem;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.triangles {
+  width: 100%;
+  height: 20rem;
+  margin-top: -10rem;
+  z-index: 1;
+}
+@media (max-width: 1088px) {
+  .triangles {
+    height: 10rem;
+    margin-top: -5rem;
+    margin-left: -25%;
+    width: 125%;
+  }
+}
+
+.Tri1 {
+  fill: #0c002f;
+  filter: url(#blur-filter);
+}
+
+.Tri2 {
+  fill: #190062;
+  filter: url(#blur-filter);
+}
+
+.Tri3 {
+  fill: #250095;
+  filter: url(#blur-filter);
+}
+
+section {
+  padding: 0.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

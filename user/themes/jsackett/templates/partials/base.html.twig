@@ -7,7 +7,7 @@
 {% endblock head%}
 </head>
 
-<body class="{{ page.header.body_classes }}">
+<body class="{{ page.header.body_classes }} {% if not page.home() %}has-navbar-fixed-top{% endif %}">
 
 <div id="app">
 
@@ -29,5 +29,6 @@
 </div>
 
 {{ assets.js() }}
+
 </body>
 </html>
