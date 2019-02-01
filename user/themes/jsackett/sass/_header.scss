@@ -1,0 +1,28 @@
+// Header properties applying to everything
+.hero {
+    &.is-dark {
+        background: darken( $primary, 40% );
+    }
+
+    h1 {
+        font-family: $family-header-title;
+        font-size: 2rem;
+        text-shadow: 0 0 1.5rem white, 0 0 4rem lighten( $primary, 20% ), 0 0 6rem lighten( $primary, 10% );
+
+        @include prefixed(transition-duration, .3s);
+        @include prefixed(transition-property, text-shadow);
+
+        &:hover,
+        &:focus,
+        &:active {
+          text-shadow: 0 0 2rem white, 0 0 4rem lighten( $primary, 20% ), 0 0 5rem lighten( $primary, 25% ), 0 0 10rem lighten( $primary, 15% );
+        }
+    }
+}
+
+// Header properties applying to just the home page
+.home {
+  a {
+    display: block;
+  }
+}
