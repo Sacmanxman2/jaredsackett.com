@@ -5,5 +5,23 @@
 {% endblock %}
 
 {% block content %}
+<section>
+  <h2 class="title is-2">Recent Blog Posts</h2>
+  <div class="postLink-container">
+    {% for p in page.collection({'items': {'@page.children': '/blog'}, 'limit': 3, 'order': {'by': 'date', 'dir': 'desc'} }) %}
+    <a href="{{ p.url }}" class="hvr-sink">
+      <div class="card">
+        <div class="card-content">
+          <h3 class="title is-4">{{ p.title }}</h3>
+          <p class="is-italic subtitle">{{ p.date|nicetime() }}</p>
+          <p class="">{{ p.summary }}</p>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+<section>
   {{ page.content }}
+</section>
 {% endblock %}

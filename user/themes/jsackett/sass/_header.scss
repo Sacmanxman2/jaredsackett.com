@@ -92,10 +92,10 @@
       }
 
       a {
-        margin: 2rem 0;
         @include prefixed(animation, fadein 1s ease-in running);
 
         &:not(.iconLink) {
+          margin: 2rem 0;
           @extend .hvr-forward;
         }
 
@@ -122,23 +122,27 @@
   }
 }
 
+// Header properties applying to not the home page
 .hero:not(.home) {
   position: fixed;
-  margin-top: -3.25rem;
   z-index: 5;
   width: 100%;
   width: 100vw;
 
-  @media(max-width: $desktop) {
-    padding: .5rem;
-    margin-top: -4.25rem;
+  @include prefixed(box-shadow, 0 0 .4rem black);
+
+  padding: .5rem;
+  top: 0;
+  transition: top 0.2s ease-in-out;
+
+  &.nav-up {
+    top: -4.25rem;
   }
+
 }
 
 body.has-navbar-fixed-top {
-  @media(max-width: $desktop) {
-    padding-top: 4.25rem;
-  }
+  padding-top: 4.25rem;
 }
 
 @include keyframes(fadein) {

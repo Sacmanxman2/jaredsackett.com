@@ -2,7 +2,12 @@
 
 {% block content %}
   {% for p in page.collection %}
-  <h2>{{ p.title }}</h2>
-  <p>{{ p.header.date }}</p>
+  <a href="{{ p.url }}">
+    <div class="postrow" data-aos="fade-up">
+      <h2>{{ p.title }}</h2>
+      <p class="postdate">Published on {{ p.header.date|date("F d, Y h:i A") }}</p>
+      <p>{{ p.summary }}</p>
+    </div>
+  </a>
   {% endfor %}
 {% endblock %}

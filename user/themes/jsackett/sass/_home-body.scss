@@ -1,0 +1,14 @@
+.postLink-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1.5rem -1rem;
+  
+  @media(max-width: $desktop) {
+    flex-direction: column;
+  }
+
+  .card {
+    margin: 1rem;
+  }
+}

@@ -6,7 +6,19 @@ $primary: rgb(50, 0, 200);
 @import 'hover-scss/_hover.scss';
 @import 'header';
 @import 'triangles';
+@import 'home-body';
 
 section {
   padding: .5rem;
+}
+
+.postrow {
+  border-bottom: 1px solid $border;
+  padding: 1rem;
+  color: $card-color;
+
+}
+
+.padding-top {
+  padding-top: 1rem;
 }
