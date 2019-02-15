@@ -16,10 +16,17 @@
     {% endblock %}
 
     {% block body %}
-    <div class="content container padding-top">
-        <section>
-            {% block content %}{% endblock %}
-        </section>
+    <div class="container padding-top">
+      <section>
+        {% if config.plugins.breadcrumbs.enabled %}
+          {% include 'partials/breadcrumbs.html.twig' %}
+        {% endif %}
+      </section>
+      <div class="content">
+          <section>
+              {% block content %}{% endblock %}
+          </section>
+      </div>
     </div>
     {% endblock %}
 
