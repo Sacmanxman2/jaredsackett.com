@@ -4,7 +4,7 @@ author: 'Jared Sackett'
 date: '2018-01-15 12:46:21'
 ---
 
-* For New Years Eve I was hanging with some friends, and we sort of invented a new game, which is a cross between Monkey in the Middle and Cornhole. I'm calling it _Monkeyhole_ because it sounds good and makes sense. It's pretty intense, and if you play it right there can be some strategy to it! I promised I'd make a write-up of some rules, including how you win (because we hadn't figured that out yet), so here they are, albeit a bit late.
+For New Years Eve I was hanging with some friends, and we sort of invented a new game, which is a cross between Monkey in the Middle and Cornhole. I'm calling it _Monkeyhole_ because it sounds good and makes sense. It's pretty intense, and if you play it right there can be some strategy to it! I promised I'd make a write-up of some rules, including how you win (because we hadn't figured that out yet), so here they are, albeit a bit late.
 
 The game requires either 3 people, or two teams and a third person, but the amount of players _must_ be odd. I'm going to assume 3 people to start, and then I'll explain how it can be modified for teams.
 
