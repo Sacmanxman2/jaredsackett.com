@@ -1,8 +1,8 @@
-enabled: false
-show_all: true
-built_in_css: true
+enabled: true
+show_all: false
+built_in_css: false
 include_home: true
 include_current: true
-icon_home: ''
-icon_divider_classes: 'fa fa-angle-right'
+icon_home: mdi-home
+icon_divider_classes: 'mdi mdi-chevron-right'
 link_trailing: false
