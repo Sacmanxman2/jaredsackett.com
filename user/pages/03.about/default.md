@@ -4,8 +4,8 @@ author: 'Jared Sackett'
 date: '18:38 25-01-2019'
 ---
 
-Cupcake ipsum dolor sit amet I love. Muffin dragée fruitcake I love cookie jujubes powder. Candy canes pastry muffin oat cake apple pie pastry cake I love marzipan. Toffee jelly beans bear claw topping sweet. Soufflé chocolate cake brownie cotton candy. Tiramisu jelly beans I love lemon drops soufflé sweet roll.
+Hello! Welcome to my site.
 
-Donut tart jelly-o jujubes brownie ice cream. Pudding liquorice jelly gummies lemon drops dessert jelly beans jelly beans. Gingerbread chocolate I love dragée chupa chups. Carrot cake jelly gummi bears cheesecake I love cake chocolate jelly cotton candy. Carrot cake cupcake dessert marshmallow I love croissant cheesecake cookie. Caramels halvah chocolate cake chocolate cake lemon drops I love pastry.
+I am a Christian, IT student, musician, and lifelong learner. I try my best to overthink everthing, and I have way too many hobbies.
 
-Candy canes candy canes I love sugar plum. Brownie candy pastry fruitcake I love oat cake chocolate cake cheesecake brownie. Tiramisu marzipan I love toffee candy I love oat cake cake. Jelly-o sugar plum I love. Cake tart chocolate I love apple pie brownie croissant. Croissant bear claw oat cake I love marzipan pastry tootsie roll tootsie roll. Apple pie bear claw powder carrot cake.
+My main goal on this site is to provide advice and work through ideas regarding Christianity, Productivity, Philosophy, Technology, Geekery, and especially when some or all of those intersect. Sometimes I'll take it really seriously, like with my post on Science and Christianity's relationship. Other times I'll try and let my goofy personality out more. This usually involves puns, references, and GIFs (which I will forever insist should be pronounced with a hard "G" as in "Godfather"). 
