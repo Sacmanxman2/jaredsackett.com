@@ -1,0 +1,39 @@
+footer
+    @extend %background-settings
+    
+    .lockup
+        padding: 40px
+        padding-top: 30px
+
+        //.logo
+            @include size(50px)
+            float: left
+            margin-right: 30px
+
+        .content-wrap
+            float: left
+
+            ul
+                list-style-type: none
+                margin: 0
+                padding: 0
+
+                li
+                    float: left
+
+            a
+                display: inline-block
+                margin-right: 20px
+                color: white
+
+                &:hover
+                    text-shadow: 0 0 10px rgba(0,0,0,1)
+
+            p
+                margin-top: 20px
+
+            .copyright
+                margin: 0
+                margin-bottom: 20px
+                @extend %small-bold
+

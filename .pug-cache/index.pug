@@ -1,0 +1,23 @@
+doctype html
+head
+    meta(name='apple-mobile-web-app-capable' content='yes')
+    meta(content='text/html; charset=utf-8' http-equiv='Content-Type')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Home | {{ site.title }}
+    link(rel='stylesheet' href='/assets/css/main.css')
+include header
+span.article-wrapper
+    article.postlist
+        ul
+            | {% for post in site.posts %}
+            li
+                a(href='{{ post.url }}')
+                    .postdate {{ post.date | date: "%B %d, %Y" }}
+                    h2 {{ post.title }}
+                    p {{ post.excerpt }}
+            | {% endfor %}
+include footer
+script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+script(src='/assets/js/functions.js')
+// REMEMBER TO ADD ANALYTICS!
+

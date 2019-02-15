@@ -1,0 +1,44 @@
+.article-wrapper
+    display: flex
+    justify-content: center
+
+.postlist
+    padding: 10px
+    width: 1200px
+
+    ul
+        display: flex
+        flex-wrap: wrap
+        
+    li
+        list-style-type: none
+        margin: 20px
+        padding: 30px
+        box-shadow: 0 2px 12px 0 rgba(0,0,0,0.5)
+        flex: 1 0 400px
+        flex-shrink: 2 
+
+
+        a
+            color: $dark-grey
+
+        h2
+            color: $dark-grey
+            margin-top: 10px
+            margin-bottom: 10px
+            font:
+                size: calc(22px + 1vw)
+
+        p
+            font:
+                size: calc(10px + .3vw)
+
+
+        &:hover
+            box-shadow: 0 4px 16px 0 rgba(0,0,0,0.5)
+
+    .postdate
+        color: grey
+        font-style: italic
+        
+

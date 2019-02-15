@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<header>
+  <div class="logo"></div>
+  <nav>
+    <ul>
+      <li><a class="menu-parent" href="/">Home</a></li>
+      <li><a class="menu-parent" href="/blog/">Blog</a></li>
+      <li><a class="menu-parent" href="/computer-setup/">Computer Setup </a></li>
+      <li><a class="menu-parent" href="/about/">About</a></li>
+      <li><a class="menu-parent" href="/faq/">FAQ</a></li>
+    </ul>
+  </nav><a href="/">
+    <h1><span>{{ site.title }}</span></h1></a>
+  <p class="kicker">{{ site.description }}</p>
+</header><span class="article-wrapper">
+  <article class="postlist">
+    <ul>{% for post in site.posts %}
+      <li><a href="{{ post.url }}">
+          <div class="postdate">{{ post.date | date: "%B %d, %Y" }}</div>
+          <h2>{{ post.title }}</h2>
+          <p>{{ post.excerpt }}</p></a></li>{% endfor %}
+    </ul>
+  </article></span>
+<footer>
+  <div class="lockup">
+    <div class="logo"></div>
+    <div class="content-wrap">
+      <nav>
+        <ul>
+          <li><a class="menu-parent" href="/">Home</a></li>
+          <li><a class="menu-parent" href="/blog/">Blog</a></li>
+          <li><a class="menu-parent" href="/computer-setup/">Computer Setup </a></li>
+          <li><a class="menu-parent" href="/about/">About</a></li>
+          <li><a class="menu-parent" href="/faq/">FAQ</a></li>
+        </ul>
+      </nav>
+      <p class="kicker">{{ site.description }}</p>
+      <p class="copyright">All content copyright 2018</p>
+    </div>
+  </div>
+</footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/assets/js/functions.js"></script>
+<!-- REMEMBER TO ADD ANALYTICS!-->
