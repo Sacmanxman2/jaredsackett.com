@@ -13426,4 +13426,8 @@ section {
   padding-top: 1rem;
 }
 
+form > div {
+  margin-bottom: 1rem;
+}
+
 /*# sourceMappingURL=main.css.map */

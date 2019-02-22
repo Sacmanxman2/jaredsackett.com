@@ -1,0 +1,7 @@
+{% extends 'forms/fields/text/text.html.twig' %}
+
+{% block input_attributes %}
+    type="email"
+    {% if field.multiple in ['on', 'true', 1] %}multiple="multiple"{% endif %}
+    {{ parent() }}
+{% endblock %}

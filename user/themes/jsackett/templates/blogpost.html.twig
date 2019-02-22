@@ -5,4 +5,5 @@
   <p class="is-italic subtitle is-6">~{{ page.content|readingtime }}</p>
   {{ page.content }}
   <p class="is-italic subtitle is-6">Published on {{ page.date|date("l F n, Y") }}</p>
+  {% include 'partials/comments.html.twig' with {'page': page} %}
 {% endblock %}

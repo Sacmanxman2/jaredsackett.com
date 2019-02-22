@@ -1,0 +1,39 @@
+<div class="field">
+  <label class="label">{{ field.name|capitalize }}</label>
+  <div class="control">
+    <input 
+      name="{{ (scope ~ field.name)|fieldName }}"
+      value="{{ value|join(', ')|e('html_attr') }}"
+      {# input attribute structures #}
+      {% block input_attributes %}
+          class="{{ form_field_input_classes }} {{ field.classes }} input"
+          {% if field.id is defined %}id="{{ field.id|e }}" {% endif %}
+          {% if field.style is defined %}style="{{ field.style|e }}" {% endif %}
+          {% if field.disabled or isDisabledToggleable %}disabled="disabled"{% endif %}
+          {% if field.placeholder %}placeholder="{{ field.placeholder|t|e('html_attr') }}"{% endif %}
+          {% if autofocus %}autofocus="autofocus"{% endif %}
+          {% if field.novalidate in ['on', 'true', 1] %}novalidate="novalidate"{% endif %}
+          {% if field.readonly in ['on', 'true', 1] %}readonly="readonly"{% endif %}
+          {% if field.autocomplete is defined %}autocomplete="{{ field.autocomplete }}"{% endif %}
+          {% if field.autocapitalize in ['off', 'characters', 'words', 'sentences'] %}autocapitalize="{{ field.autocapitalize }}"{% endif %}
+          {% if field.inputmode in ['none', 'text', 'decimal', 'numeric', 'tel', 'search', 'email', 'url'] %}inputmode="{{ field.inputmode }}"{% endif %}
+          {% if field.spellcheck in ['true', 'false'] %}spellcheck="{{ field.spellcheck }}"{% endif %}
+
+          {% if field.attributes is defined %}
+            {% for attribute in field.attributes %}
+                {{ attribute.name }}="{{ attribute.value|e }}"
+            {% endfor %}
+          {% endif %}
+          {% if required %}required="required"{% endif %}
+          {% if field.validate.pattern %}pattern="{{ field.validate.pattern|e }}"{% endif %}
+          {% if field.validate.message %}title="{{ field.validate.message|t|e }}"
+          {% elseif field.title is defined %}title="{{ field.title|t|e }}" {% endif %}
+          {% if field.datasets %}
+              {% for datakey, datavalue in field.datasets %}
+                  data-{{ datakey }}="{{ datavalue|e('html_attr') }}"
+              {% endfor %}
+          {% endif %}
+      {% endblock %}
+    >
+  </div>
+</div>
