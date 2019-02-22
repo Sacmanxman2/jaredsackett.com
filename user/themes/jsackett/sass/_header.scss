@@ -65,8 +65,8 @@
     }
 
     h1 {
-      font-size: 4rem;
-      @include prefixed(animation, fadein 1s ease-in running);
+      font-size: 6rem;
+      @include prefixed(animation, lightson1 linear 2s running);
 
       @media(max-width: $desktop) {
           text-align: center;
@@ -77,7 +77,7 @@
       margin-top: 1rem;
       font-size: 1.5rem;
       text-shadow: 0 0 1rem white, 0 0 2rem lighten( $primary, 20% ), 0 0 4rem lighten( $primary, 10% );
-      @include prefixed(animation, fadein 1s ease-in running);
+      @include prefixed(animation, lightson2 2s ease-in running);
 
       @media(max-width: $desktop) {
           text-align: center;
@@ -93,6 +93,8 @@
 
       a {
         @include prefixed(animation, fadein 1s ease-in running);
+        @include prefixed(transition-duration, 1s);
+        @include prefixed(transition-property, text-shadow);
 
         &:not(.iconLink) {
           margin: 2rem 0;
@@ -151,3 +153,37 @@ body.has-navbar-fixed-top {
 }
 
 
+@include keyframes(lightson1) {
+  0% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  50% {
+    opacity: 1;
+    text-shadow: none;
+  }
+  70% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: 0 0 1.5rem white, 0 0 4rem lighten( $primary, 20% ), 0 0 6rem lighten( $primary, 10% );
+  }
+}
+
+
+@include keyframes(lightson2) {
+  0% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  50% {
+    opacity: 1;
+    text-shadow: none;
+  }
+  70% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: 0 0 1rem white, 0 0 2rem lighten( $primary, 20% ), 0 0 4rem lighten( $primary, 10% );
+  }
+}

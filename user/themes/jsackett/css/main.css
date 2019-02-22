@@ -13278,9 +13278,9 @@ label.panel-block:hover {
   display: block;
 }
 .home .hero-body h1 {
-  font-size: 4rem;
-  -webkit-animation: fadein 1s ease-in running;
-  animation: fadein 1s ease-in running;
+  font-size: 6rem;
+  -webkit-animation: lightson1 linear 2s running;
+  animation: lightson1 linear 2s running;
 }
 @media (max-width: 1088px) {
   .home .hero-body h1 {
@@ -13291,8 +13291,8 @@ label.panel-block:hover {
   margin-top: 1rem;
   font-size: 1.5rem;
   text-shadow: 0 0 1rem white, 0 0 2rem #632fff, 0 0 4rem #3f00fb;
-  -webkit-animation: fadein 1s ease-in running;
-  animation: fadein 1s ease-in running;
+  -webkit-animation: lightson2 2s ease-in running;
+  animation: lightson2 2s ease-in running;
 }
 @media (max-width: 1088px) {
   .home .hero-body h2 {
@@ -13310,6 +13310,10 @@ label.panel-block:hover {
 .home .hero-body nav a {
   -webkit-animation: fadein 1s ease-in running;
   animation: fadein 1s ease-in running;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-property: text-shadow;
+  transition-property: text-shadow;
 }
 .home .hero-body nav a:not(.iconLink) {
   margin: 2rem 0;
@@ -13364,6 +13368,70 @@ body.has-navbar-fixed-top {
   }
   to {
     opacity: 1;
+  }
+}
+@-webkit-keyframes lightson1 {
+  0% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  50% {
+    opacity: 1;
+    text-shadow: none;
+  }
+  70% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: 0 0 1.5rem white, 0 0 4rem #632fff, 0 0 6rem #3f00fb;
+  }
+}
+@keyframes lightson1 {
+  0% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  50% {
+    opacity: 1;
+    text-shadow: none;
+  }
+  70% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: 0 0 1.5rem white, 0 0 4rem #632fff, 0 0 6rem #3f00fb;
+  }
+}
+@-webkit-keyframes lightson2 {
+  0% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  50% {
+    opacity: 1;
+    text-shadow: none;
+  }
+  70% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: 0 0 1rem white, 0 0 2rem #632fff, 0 0 4rem #3f00fb;
+  }
+}
+@keyframes lightson2 {
+  0% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  50% {
+    opacity: 1;
+    text-shadow: none;
+  }
+  70% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: 0 0 1rem white, 0 0 2rem #632fff, 0 0 4rem #3f00fb;
   }
 }
 .triangles {
