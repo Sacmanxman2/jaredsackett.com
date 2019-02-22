@@ -1,14 +1,16 @@
 ---
 title: 'Computer Setup'
-author: 'Jared Sackett'
+media_order: 'FirefoxSetup.png,FakeBusy1.jpg'
 date: '17:00 04-02-2019'
+comments: true
+author: 'Jared Sackett'
 ---
 
 This is an overview of my computer setup. Enjoy, and feel free to comment or ask questions!
 
 ![Fake Busy 1](FakeBusy1.jpg)
 
-## TLDR (Specs)
+## Specs
 ===
 ### Software
 
@@ -70,7 +72,7 @@ The main downside with the alternative layout for me (other than lack of speed o
 
 Also, I have Caps Lock remapped to Esc for use with VIM-like stuff. Most people remap it to backspace, but ~~I don't make mistakes when typing~~ backspace is easier to reach than escape on most keyboards for me.
 
-[##](##) General Usage
+## General Usage
 * * *
 
 On both my desktop I use the [i3-gaps tiling window manager](https://github.com/Airblader/i3). I've switched to a tiling WM for simplicity, performance, and biggest of all: Speed. I use i3-gaps instead of i3 because gaps.

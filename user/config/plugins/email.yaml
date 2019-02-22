@@ -1,0 +1,13 @@
+enabled: true
+from: jake850@gmail.com
+to: jake850@gmail.com
+mailer:
+  engine: sendmail
+  smtp:
+    server: localhost
+    port: 25
+    encryption: none
+  sendmail:
+    bin: '/usr/sbin/sendmail -bs'
+content_type: text/html
+debug: false

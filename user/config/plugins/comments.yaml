@@ -1,6 +1,7 @@
-enabled: false
+enabled: true
 enable_on_routes:
   - /blog
+  - /computer-setup
 disable_on_routes:
   - /blog/blog-post-to-ignore
   - /ignore-this-route
@@ -46,11 +47,24 @@ form:
       name: path
       type: hidden
       evaluateDefault: grav.uri.path
+    - 
+      name: g-recaptcha-response
+      label: Captcha
+      type: captcha
+      recaptcha_site_key: 6LffUpMUAAAAAOK0oTngI5QfyWCqYsAPVbl_I-jp
+      recaptcha_not_validated: 'Captcha not valid!'
+      validate:
+        required: true
+      process:
+        ignore: true
   buttons:
     -
       type: submit
       value: PLUGIN_COMMENTS.SUBMIT_COMMENT_BUTTON_TEXT
   process:
+    - 
+      captcha:
+        recaptcha_secret: 6LffUpMUAAAAAAJLOuzKLtfRBrWDHaexvXoZH5F7
     -
       email:
         subject: PLUGIN_COMMENTS.EMAIL_NEW_COMMENT_SUBJECT
