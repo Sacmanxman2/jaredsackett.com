@@ -1,0 +1,53 @@
+{% extends 'default.html.twig' %}
+
+{% block content %}
+    <h1>{{ page.title }}</h1>
+    <div class="portfolio">
+        <p>This is a list of projects I've worked on. Unless otherwise stated, these are all responsive websites hosted on my own unmanaged VPS via Apache.</p>
+
+        <div class="portfolio-site">
+            <a class="portfolio-link" href="https://cme.acutecare.com" target="none">
+                <div class="portfolio-image">
+                    {{ page.media['Screenshot_2019-02-22 ACI CME.jpg'] }}
+                </div>
+                <div class="portfolio-text">
+                    <div class="portfolio-text-content">
+                        <h3 class="portfolio-title">Acute Care CME Site</h3>
+                        <p class="portfolio-tools"><b>Tools Used:</b> Laravel, VueJS, Bulma, Sass</p>
+                        <p class="portfolio-text">I built this during my Internship at Acute Care, Inc. They needed a site where doctors could go through training to earn CME certificates. It's a fully responsive website which includes a custom integrated admin interface used to create/edit the tests and content, and uses Imagemagick in the backend to generate certificates. This is hosted by the company.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="portfolio-site">
+            <a class="portfolio-link right-img" href="https://vertextapp.com" target="none">
+                <div class="portfolio-image">
+                    {{ page.media['Screenshot_2019-04-04 Vertext.png'] }}
+                </div>
+                <div class="portfolio-text">
+                    <div class="portfolio-text-content">
+                        <h3 class="portfolio-title">Vertext App</h3>
+                        <p class="portfolio-tools"><b>Tools Used:</b> Laravel, VueJS, Bulma, Sass</p>
+                        <p class="portfolio-text">This is a simple tool to help with text memorization. As it is, it definitely doesn't require the functionality of Laravel or VueJS, but I plan to extend it quite a lot and so decided to start building it with those in the first place. It uses custom vanilla JS functions within Vue to process the text in real time, and enable copying functionality. The source code is available on my github.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="portfolio-site">
+            <a class="portfolio-link" href="https://www.jaredsackett.com" target="none">
+                <div class="portfolio-image">
+                    {{ page.media['Screenshot_2019-02-22 Home.jpg'] }}
+                </div>
+                <div class="portfolio-text">
+                    <div class="portfolio-text-content">
+                        <h3 class="portfolio-title">This Site</h3>
+                        <p class="portfolio-tools"><b>Tools Used:</b> Grav CMS, Bulma, Sass</p>
+                        <p class="portfolio-text">I went back and forth between using a static site generator like Hugo or Jeckyll, or using a flat file CMS like Grav. I decided to go for the CMS due to the ease of editing and future extensibility, and chose Grav due to it's flat-file nature and performance.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+{% endblock %}

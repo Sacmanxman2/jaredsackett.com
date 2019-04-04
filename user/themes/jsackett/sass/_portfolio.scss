@@ -1,0 +1,37 @@
+.portfolio-link {
+    margin: 1rem 0;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border-top: 1px solid $text;
+
+    &.right-img {flex-direction: row-reverse;}
+
+    .portfolio-image {
+        flex: 2;
+        margin: 2rem;
+        @extend .hvr-shrink;
+        text-align: center;
+
+        img {
+            width: 100%;
+            min-width: 1rem;
+            max-width: 30rem;
+        }
+    }
+
+    .portfolio-text {
+        flex: 3;
+        color: $text;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @media(max-width: $desktop) {
+        flex-direction : column;
+
+        &.right-img {flex-direction: column;}
+    }
+}
