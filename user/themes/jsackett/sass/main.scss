@@ -8,6 +8,10 @@ $primary: rgb(50, 0, 200);
 @import 'triangles';
 @import 'home-body';
 
+body {
+  min-height: 100vh;
+}
+
 section {
   padding: .5rem;
 }
@@ -25,4 +29,42 @@ section {
 
 form > div {
   margin-bottom: 1rem;
+}
+
+.darkmode {
+  background: darken( $primary, 40% );
+  color: $grey-lighter;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  label,
+  .label,
+  footer,
+  .footer,
+  strong,
+  .postrow,
+  .input, 
+  .textarea {
+    color: $grey-lighter;
+    @include prefixed(placeholder, $grey-lighter);
+  }
+
+  footer,
+  .footer,
+  .input,
+  .textarea {
+    background: darken( $primary, 40% );
+  }
+
+  .content table td, 
+  .content table th {
+    border: 1px solid $dark;
+    border-width: 0 0 1px;
+  }
+
+
 }

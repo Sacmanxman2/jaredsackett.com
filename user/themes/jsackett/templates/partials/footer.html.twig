@@ -1,5 +1,35 @@
 <footer class="footer">
     <div class="container">
       <p>&copy; {{ "now"|date("Y") }} Jared Sackett</p>
+      <br>
+      <button class="button" id="darkmodeToggle">Darkmode off</button>
     </div>
 </footer>
+<script>
+  var darkMode = false;
+  var darkmodeToggleButton = document.querySelector("#darkmodeToggle");
+  if (localStorage.getItem('darkMode')) {
+    darkMode = !!localStorage.getItem('darkMode');
+    if (darkMode) {
+      darkmodeToggleButton.innerText = "Darkmode on";
+      document.querySelector("body").classList.add('darkmode');
+      darkmodeToggleButton.classList.add('is-dark');
+    }
+    localStorage.setItem('darkMode', darkMode);
+  }
+  console.log(darkMode)
+
+  function toggleDarkMode() {
+    if (darkMode) {
+      this.innerText = "Darkmode off";
+      darkMode = false;
+    } else {
+      this.innerText = "Darkmode on";
+      darkMode = true;
+    }
+    document.querySelector("body").classList.toggle('darkmode');
+    this.classList.toggle('is-dark');
+    localStorage.setItem('darkMode', darkMode);
+  }
+  darkmodeToggleButton.addEventListener('click', toggleDarkMode);
+</script>

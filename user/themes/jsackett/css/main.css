@@ -13480,6 +13480,10 @@ body.has-navbar-fixed-top {
   margin: 1rem;
 }
 
+body {
+  min-height: 100vh;
+}
+
 section {
   padding: 0.5rem;
 }
@@ -13496,6 +13500,40 @@ section {
 
 form > div {
   margin-bottom: 1rem;
+}
+
+.darkmode {
+  background: black;
+  color: #dbdbdb;
+}
+.darkmode h1,
+.darkmode h2,
+.darkmode h3,
+.darkmode h4,
+.darkmode h5,
+.darkmode h6,
+.darkmode label,
+.darkmode .label,
+.darkmode footer,
+.darkmode .footer,
+.darkmode strong,
+.darkmode .postrow,
+.darkmode .input,
+.darkmode .textarea {
+  color: #dbdbdb;
+  -webkit-placeholder: #dbdbdb;
+  placeholder: #dbdbdb;
+}
+.darkmode footer,
+.darkmode .footer,
+.darkmode .input,
+.darkmode .textarea {
+  background: black;
+}
+.darkmode .content table td,
+.darkmode .content table th {
+  border: 1px solid #363636;
+  border-width: 0 0 1px;
 }
 
 /*# sourceMappingURL=main.css.map */
