@@ -1,4 +1,4 @@
-enabled: true
+enabled: false
 enable_on_routes:
   - /blog
   - /computer-setup
@@ -47,7 +47,7 @@ form:
       name: path
       type: hidden
       evaluateDefault: grav.uri.path
-    - 
+    -
       name: g-recaptcha-response
       label: Captcha
       type: captcha
@@ -62,7 +62,7 @@ form:
       type: submit
       value: PLUGIN_COMMENTS.SUBMIT_COMMENT_BUTTON_TEXT
   process:
-    - 
+    -
       captcha:
         recaptcha_secret: 6LffUpMUAAAAAAJLOuzKLtfRBrWDHaexvXoZH5F7
     -
